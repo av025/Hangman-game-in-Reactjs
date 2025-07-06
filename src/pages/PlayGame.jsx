@@ -20,9 +20,8 @@ function PlayGame() {
   }
 
   const isGameWon = [...new Set(state.wordSelected.toUpperCase())].every(
-  (letter) => guessedLetters.includes(letter)
-);
-
+    (letter) => guessedLetters.includes(letter)
+  );
 
   if (step >= 8) {
     return (
@@ -61,14 +60,10 @@ function PlayGame() {
       </div>
 
       {isGameWon && (
-          <h2 className="text-4xl m-4 text-green-600 text-center">
-      🎉 You guessed the word correctly!
-    </h2>
-    
-
-)}
-
-     
+        <h2 className="text-4xl m-4 text-green-600 text-center">
+          🎉 You guessed the word correctly!
+        </h2>
+      )}
     </>
   );
 }
